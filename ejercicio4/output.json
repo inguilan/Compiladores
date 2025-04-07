@@ -1,0 +1,47 @@
+[
+  {
+    "Detalles": "Bono Medio",
+    "Mes": "Junio",
+    "Cantidad": "2000"
+  },
+  {
+    "Detalles": "Aguinaldo",
+    "Mes": "Julio",
+    "Cantidad": "3500"
+  },
+  {
+    "Detalles": "Prima",
+    "Mes": "Enero",
+    "Cantidad": "1200"
+  },
+  {
+    "Detalles": "Vacaciones",
+    "Mes": "Agosto",
+    "Cantidad": "4000"
+  },
+  {
+    "Detalles": "Horas Extra",
+    "Mes": "Abril",
+    "Cantidad": "950"
+  },
+  {
+    "Detalles": "Bonificación Anual",
+    "Mes": "Diciembre",
+    "Cantidad": "5000"
+  },
+  {
+    "Detalles": "Reconocimiento",
+    "Mes": "Marzo",
+    "Cantidad": "800"
+  },
+  {
+    "Detalles": "",
+    "Mes": "Febrero",
+    "Cantidad": "N/A"
+  },
+  {
+    "Detalles": "Bonificaciones Totales",
+    "Mes": "",
+    "Cantidad": "9500"
+  }
+]
