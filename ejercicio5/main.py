@@ -3,7 +3,7 @@ from antlr4.error.ErrorListener import ErrorListener
 
 from SimpleLexer import SimpleLexer
 from SimpleParser import SimpleParser
-from CustomListener import CustomListener  # <- Asegúrate de tener este archivo creado
+from ejercicio5.Listener import CustomListener  
 
 class VerboseErrorListener(ErrorListener):
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):

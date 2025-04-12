@@ -3,12 +3,12 @@ grammar Simple;
 prog: classDef+ ;
 
 classDef
-    : 'class' ID '{' member+ '}'
+    : 'class' ID '{' member+ '}' 
     ;
 
 member
     : 'int' ID ';'
-    | 'int' ID '(' ID ')' '{' stat '}'
+    | 'int' ID '(' ID ')' '{' stat+ '}' 
     ;
 
 stat
@@ -17,12 +17,12 @@ stat
     ;
 
 expr
-    : expr ('+' | '-') expr   # AddSub
-    | expr ('*' | '/') expr   # MulDiv
-    | INT                     # Int
-    | ID '(' INT ')'          # FuncCall
-    | ID                      # Var
-    | '(' expr ')'            # Parens
+    : expr ('+' | '-') expr      # AddSub
+    | expr ('*' | '/') expr      # MulDiv
+    | INT                        # Int
+    | ID '(' INT ')'             # FuncCall
+    | ID                         # Var
+    | '(' expr ')'               # Parens
     ;
 
 INT : [0-9]+ ;
