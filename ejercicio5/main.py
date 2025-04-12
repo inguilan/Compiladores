@@ -3,6 +3,7 @@ from antlr4.error.ErrorListener import ErrorListener
 
 from SimpleLexer import SimpleLexer
 from SimpleParser import SimpleParser
+from CustomListener import CustomListener  # <- Asegúrate de tener este archivo creado
 
 class VerboseErrorListener(ErrorListener):
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
@@ -19,7 +20,13 @@ def parse_input(input_text):
 
     try:
         tree = parser.prog()
-        print("✅ Entrada válida.")
+        print("✅ Entrada válida o parcialmente válida.")
+        
+        # 🎧 Listener para imprimir clases, métodos y asignaciones
+        listener = CustomListener()
+        walker = ParseTreeWalker()
+        walker.walk(listener, tree)
+
     except Exception as e:
         print("⚠️ Excepción atrapada:", str(e))
 
@@ -33,7 +40,7 @@ if __name__ == "__main__":
     print("\n=== Entrada con error 2 ===")
     parse_input("class C { int f(x) { a = 3 + 5; } }")
 
-    print("\n=== Entrada con error 3===")
+    print("\n=== Entrada con error 3 ===")
     parse_input("class G { int f(x) { a =5; } }")
 
     print("\n=== Entrada válida 4 ===")
